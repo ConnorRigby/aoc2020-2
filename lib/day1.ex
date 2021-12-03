@@ -16,7 +16,7 @@ defmodule Day1 do
     |> Enum.map(&elem(&1, 0))
     |> chunk([])
     |> Enum.map(fn
-      [one, two, three] -> one+two+three
+      [one, two, three] -> one + two + three
       extra -> extra
     end)
   end
@@ -28,6 +28,7 @@ defmodule Day1 do
   def chunk(_extra, acc), do: Enum.reverse(acc)
 
   def solve_normalized(input, last \\ nil, acc \\ [])
+
   def solve_normalized([depth | rest], last, acc) do
     solve_normalized(rest, depth, [measurement(depth, last) | acc])
   end
