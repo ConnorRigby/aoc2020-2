@@ -74,8 +74,7 @@ defmodule Day3 do
         a -> a
       end
 
-    {Enum.reduce(o2, <<>>, fn v, a -> a <> "#{v}" end) |> String.to_integer(2),
-     Enum.reduce(co2, <<>>, fn v, a -> a <> "#{v}" end) |> String.to_integer(2)}
+    {Enum.reduce(o2, <<>>, fn v, a -> a <> "#{v}" end) |> String.to_integer(2), Enum.reduce(co2, <<>>, fn v, a -> a <> "#{v}" end) |> String.to_integer(2)}
   end
 
   ## part1
